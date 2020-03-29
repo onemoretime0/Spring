@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Spring-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hellospring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hellospring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-appconfig/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-appconfig/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-autowired/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-autowired/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-di/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-di/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ioc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ioc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ioccreateobject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ioccreateobject/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-porxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-porxy/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

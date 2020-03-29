@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="userServiceImp" class="service.UserServiceImp"/>
+    <bean id="afterLog" class="logs.AfterLog"/>
+    <bean id="beforeLog" class="logs.BeforeLog"/>
+
+    <!--方式一：使用原生的Spring API接口-->
+    <!-- 配置AOP:需要导入AOP的约束-->
+    <!--<aop:config>
+        &lt;!&ndash;切入点:expression:表达式，execution(要执行的位置)
+        这句代码的意思就是，要在service.UserServiceImp类中所有的方法执行的时候，都要执行新增加的功能
+        也就额是以service.UserServiceImp类中所有的方法作为新功能的切入点
+        &ndash;&gt;
+        <aop:pointcut id="pointcut" expression="execution(* service.UserServiceImp.*(..))"/>
+        &lt;!&ndash;执行增强环绕&ndash;&gt;
+        <aop:advisor advice-ref="beforeLog" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
+
+    </aop:config>-->
+
+  <!--  &lt;!&ndash;方式二：定义类来实现AOP&ndash;&gt;
+    <bean id="myPointCut" class="diy.MyPointCut"/>
+    <aop:config>
+        &lt;!&ndash;自定义切面：ref要引用的类&ndash;&gt;
+        <aop:aspect id="aspect" ref="myPointCut">
+            &lt;!&ndash;切入点&ndash;&gt;
+            <aop:pointcut id="point" expression="execution(* service.UserServiceImp.*(..))"/>
+            &lt;!&ndash;通知&ndash;&gt;
+            &lt;!&ndash;这句代码的意思就是，在切入点point的位置执行before方法(自定义切面类中的方法)&ndash;&gt;
+            <aop:before method="before" pointcut-ref="point"/>
+            <aop:after method="after" pointcut-ref="point"/>
+        </aop:aspect>
+
+    </aop:config>-->
+
+    <!--方式三：-->
+    <!--bean也可以直接使用@Component注解注册到容器中-->
+    <bean id="annotationPointCut" class="diy.AnnotationPointCut"/>
+    <!--开启注解支持
+    spring实现代理的两种方式：
+        1.JDK(接口，默认)：proxy-target-class="false"
+        2.cglib(类)： proxy-target-class="true"
+
+    -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+</beans>

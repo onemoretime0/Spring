@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用spring来创建对象,在spring中这些都称为Bean
+    使用Java代码创建对象：
+        Type 变量名 =new Type();
+    在bean标签中:
+        id =变量名
+        class = new 的对象
+        property 相当于对象中的一个属性设置一个值
+
+    -->
+    <bean id="hello" class="com.hello.Hello">
+        <property name="str" value="HelloSpring"/>
+    </bean>
+</beans>

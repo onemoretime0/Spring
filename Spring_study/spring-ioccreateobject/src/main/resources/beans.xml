@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="user" class="pojo.User" >
+        &lt;!&ndash;通过属性下标赋值的方式，初始化User&ndash;&gt;
+        <constructor-arg index="0" value="法外狂徒张三"/>
+    </bean>-->
+    <!--   &lt;!&ndash;类型赋值方式&ndash;&gt;
+       <bean id="user" class="pojo.User" >
+       <constructor-arg type="java.lang.String" value="类型赋值：法外狂徒张三"/>
+       </bean>-->
+    <bean id="user" class="pojo.User">
+        <constructor-arg name="name" value="参数名赋值：法外狂徒张三"/>
+    </bean>
+    <alias name="user" alias="user_alias"/>
+
+</beans>

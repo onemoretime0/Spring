@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="UserDaoIml" class="com.ioctheory.dao.UserDaoIml"></bean>
+    <bean id="UserDaoMySQLIml" class="com.ioctheory.dao.UserDaoMySQLIml"></bean>
+    <bean id="UserServiceIml" class="com.ioctheory.service.UserServiceIml">
+        <property name="userDao" ref="UserDaoIml"/>
+    </bean>
+</beans>

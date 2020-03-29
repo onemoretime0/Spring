@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="pojo.Address">
+        <property name="address" value="临沂市"/>
+    </bean>
+
+    <bean id="student" class="pojo.Student">
+        <!--第一种普通值注入：直接使用value-->
+        <property name="name" value="法外狂徒张三"/>
+        <!--第二种：Bean注入:ref-->
+        <property name="address" ref="address"/>
+        <!--第三种种：数组注入:<array><value>...</value></array>-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>不能承受的生命之轻</value>
+                <value>黄金时代</value>
+            </array>
+        </property>
+        <!--List注入: <list> <value> ...</value> </list> -->
+        <property name="hobbies">
+            <list>
+                <value>play game</value>
+                <value>Anime</value>
+            </list>
+        </property>
+        <!--Map 注入：<map><entry key="" value=""/> </map>-->
+        <property name="card">
+            <map>
+                <entry key="IDcard" value="123456"/>
+                <entry key="银行卡" value="65432120"/>
+            </map>
+        </property>
+        <!--Set 注入：<set> <value>...</value>
+        <ref bean="myDataSource" /></set>-->
+        <property name="games">
+            <set>
+                <value>刺客信条：黑旗</value>
+                <value>刺客信条：大革命</value>
+                <value>刺客信条：起源</value>
+                <value>Witch dog</value>
+            </set>
+        </property>
+        <!--null 注入：
+        空串注入和null注入不同，空串注入：<property name="wife" value=""/>
+        null注入： <property name="wife">
+                    <null/>
+                 </property>
+        -->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--Properties注入:-->
+        <property name="info">
+            <props>
+                <!--prop也是key:value格式的，但是value必须写到标签外面-->
+                <prop key="学号">123455665</prop>
+                <prop key="准考证号">1248080</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
