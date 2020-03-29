@@ -1,14 +1,4 @@
-```
-public class UserMapperImpl2 extends SqlSessionDaoSupport implements UserMapper {
-    @Override
-    public List<User> getUserList() {
-        SqlSession sqlSession = getSqlSession();
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-
-        return mapper.getUserList();
-    }
-}
-```
+  
 
 # 1.代理模式
 
